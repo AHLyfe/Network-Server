@@ -1,2 +1,2 @@
-# Network-Server
+# Server
 Server for game

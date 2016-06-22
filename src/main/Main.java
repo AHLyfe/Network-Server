@@ -1,19 +1,11 @@
 package main;
 
-import com.esotericsoftware.kryonet.Server;
-import com.esotericsoftware.minlog.Log;
+import server.MPServer;
 
 public class Main {
-	private Server server;
+	static MPServer server;
 	
-	public Main(){
-		
+	public static void main(String[] args){
+		server = new MPServer();
 	}
-
-	public static void main(String[] args) {
-		new Main();
-		Log.set(Log.LEVEL_DEBUG);
-
-	}
-
 }
