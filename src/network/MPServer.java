@@ -14,7 +14,7 @@ public class MPServer {
 		server = new Server();
 		registerPackets();
 		server.addListener(new NetworkListener());
-		server.bind(2718,2718);
+		server.bind(Properties.port,Properties.port);
 		server.start();
 		
 	}

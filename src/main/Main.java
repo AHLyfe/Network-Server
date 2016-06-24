@@ -4,9 +4,9 @@ import java.io.IOException;
 
 import javax.swing.JFrame;
 import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
 
 import com.esotericsoftware.minlog.Log;
+import com.sun.media.jfxmedia.logging.Logger;
 
 import gui.Panel;
 import network.MPServer;
@@ -29,7 +29,7 @@ public class Main {
 		frame.setResizable(false);
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);
-		
+				
 		try {
 			mpServer = new MPServer();
 			Log.set(Log.LEVEL_DEBUG);

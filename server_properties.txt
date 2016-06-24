@@ -1,0 +1,3 @@
+serverName:A Server
+maxPlayers:6
+port:2718
