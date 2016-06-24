@@ -9,7 +9,7 @@ import javax.swing.UnsupportedLookAndFeelException;
 import com.esotericsoftware.minlog.Log;
 
 import gui.Panel;
-import server.MPServer;
+import network.MPServer;
 
 public class Main {
 	static MPServer mpServer;

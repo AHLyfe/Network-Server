@@ -20,8 +20,12 @@ public class Player extends Object{
 	public int getTeam(){
 		return teamID;
 	}
-	
-	
+
+	@Override
+	void update(double dt) {
+		// TODO Auto-generated method stub
+		
+	}
 }
 
 

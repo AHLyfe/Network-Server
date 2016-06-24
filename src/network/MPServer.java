@@ -1,11 +1,11 @@
-package server;
+package network;
 
 import java.io.IOException;
 
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryonet.Server;
 
-import server.Packet.*;
+import network.Packet.*;
 
 public class MPServer {
 	private Server server;

@@ -1,4 +1,4 @@
-package server;
+package network;
 
 public class Packet {
 	public static class Packet0LoginRequest { }
