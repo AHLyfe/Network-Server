@@ -1,4 +1,4 @@
-package gui;
+package network;
 
 import javax.swing.JList;
 

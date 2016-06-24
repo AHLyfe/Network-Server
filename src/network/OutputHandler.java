@@ -1,4 +1,4 @@
-package gui;
+package network;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;

@@ -8,8 +8,8 @@ import javax.swing.UIManager;
 import com.esotericsoftware.minlog.Log;
 import com.sun.media.jfxmedia.logging.Logger;
 
-import gui.Panel;
 import network.MPServer;
+import network.Panel;
 
 public class Main {
 	static MPServer mpServer;

@@ -1,4 +1,4 @@
-package gui;
+package network;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
@@ -11,8 +11,9 @@ import javax.swing.JTextField;
 import javax.swing.border.EtchedBorder;
 import javax.swing.border.TitledBorder;
 
+import com.esotericsoftware.minlog.Log;
+
 import main.Main;
-import network.Properties;
 
 public class Panel extends JPanel{
 	public static Logger logger = Logger.getLogger("ServerLog");
@@ -25,13 +26,10 @@ public class Panel extends JPanel{
 		add(getPlayerList(), "North");
 		add(getLog(), "Center");
 		
-		logger.info("info test");
-		logger.warning("warning test");
-		
 		properties = new Properties();
 		
-		
-		System.out.println("Name of Server: " + properties.name);
+		logger.info("Starting server " + "\"" + properties.name + "\"" + " on port " + properties.port);
+				
 	}
 	
 	public JScrollPane getPlayerList(){

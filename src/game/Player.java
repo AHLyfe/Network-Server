@@ -2,6 +2,7 @@ package game;
 
 public class Player extends Object{
 	private int teamID;
+	private int playerID;
 	private String username;
 	
 	
