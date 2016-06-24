@@ -1,18 +1,21 @@
 package main;
 
 import java.io.IOException;
+import java.util.logging.Logger;
 
 import javax.swing.JFrame;
 import javax.swing.UIManager;
 
 import com.esotericsoftware.minlog.Log;
-import com.sun.media.jfxmedia.logging.Logger;
 
 import network.MPServer;
-import network.Panel;
+import network.Properties;
+import network.Window;
 
 public class Main {
-	static MPServer mpServer;
+	public static MPServer mpServer;
+	public static Logger logger;
+	public static Properties properties;
 	
 	public static void main(String[] args){
 		
@@ -22,13 +25,20 @@ public class Main {
 			e.printStackTrace();
 		}
 		
+		logger = Logger.getLogger("ServerLog");
+		properties = new Properties();
+		
+		logger.info("test");
+		
 		JFrame frame = new JFrame("Server");
-		frame.add(new Panel());
+		frame.add(new Window(logger));
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.pack();
 		frame.setResizable(false);
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);
+		
+		logger.info("test");
 				
 		try {
 			mpServer = new MPServer();

@@ -15,20 +15,19 @@ import com.esotericsoftware.minlog.Log;
 
 import main.Main;
 
-public class Panel extends JPanel{
-	public static Logger logger = Logger.getLogger("ServerLog");
-	Properties properties;
+public class Window extends JPanel{
+	private Logger logger;
 	
-	public Panel(){
+	public Window(Logger logger){
+		this.logger = logger;
+		
 		setPreferredSize(new Dimension(600,400));
 		setLayout(new BorderLayout());
 		
 		add(getPlayerList(), "North");
 		add(getLog(), "Center");
 		
-		properties = new Properties();
-		
-		logger.info("Starting server " + "\"" + properties.name + "\"" + " on port " + properties.port);
+		logger.info("Starting server " + "\"" + Main.properties.name + "\"" + " on port " + Main.properties.port);
 				
 	}
 	
