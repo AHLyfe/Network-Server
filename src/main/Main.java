@@ -27,9 +27,7 @@ public class Main {
 		
 		logger = Logger.getLogger("ServerLog");
 		properties = new Properties();
-		
-		logger.info("test");
-		
+				
 		JFrame frame = new JFrame("Server");
 		frame.add(new Window(logger));
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

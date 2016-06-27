@@ -2,7 +2,7 @@ package game;
 
 import game.math.Vector2D;
 
-public abstract class Object {
+public abstract class GameObject {
 	private Vector2D position;
 	private Vector2D velocity;
 	private Vector2D acceleration;

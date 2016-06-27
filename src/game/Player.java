@@ -1,6 +1,6 @@
 package game;
 
-public class Player extends Object{
+public class Player extends GameObject{
 	private int teamID;
 	private int playerID;
 	private String username;

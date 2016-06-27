@@ -17,7 +17,6 @@ public class MPServer {
 		server.addListener(new NetworkListener());
 		server.bind(Properties.port,Properties.port);
 		server.start();
-		
 	}
 	
 	private void registerPackets(){
@@ -25,5 +24,9 @@ public class MPServer {
 		kryo.register(Packet0LoginRequest.class);
 		kryo.register(Packet1LoginAccepted.class);
 		kryo.register(Packet2Message.class);
+	}
+	
+	public void stopServer(){
+		server.stop();
 	}
 }
