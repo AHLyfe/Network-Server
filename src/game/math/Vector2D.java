@@ -1,8 +1,8 @@
 package game.math;
 
 public class Vector2D {
-	private float x;
-	private float y;
+	public float x;
+	public float y;
 	
 	public Vector2D(float x, float y){
 		this.x = x;
@@ -24,5 +24,13 @@ public class Vector2D {
 		y = v.y;
 		return this;
 	}
+	
+	public Vector2D mulAdd(Vector2D vec, double scalar){
+		this.x += vec.x * scalar;
+		this.y += vec.y * scalar;
+		return this;
+	}
+	
+	
 	
 }
