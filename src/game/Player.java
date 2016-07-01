@@ -1,6 +1,6 @@
 package game;
 
-public class Player extends GameObject{
+public class Player extends CircularObject{
 	private int teamID;
 	private int playerID;
 	private String username;

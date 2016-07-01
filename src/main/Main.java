@@ -18,6 +18,7 @@ public class Main {
 	public static Properties properties;
 	
 	public static void main(String[] args){
+		Log.set(Log.LEVEL_DEBUG);
 		
 		try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
@@ -36,13 +37,13 @@ public class Main {
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);
 		
-		logger.info("test");
-				
+		logger.info("test");		
+		
 		try {
 			mpServer = new MPServer();
 			Log.set(Log.LEVEL_DEBUG);
 		} catch (IOException e) {
 			e.printStackTrace();
-		}
+		}		
 	}
 }

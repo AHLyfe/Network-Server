@@ -41,7 +41,7 @@ public class OutputHandler extends Handler{
 			builder.append("[WARNING] ");
 		}
 		else 	if(level == Level.SEVERE){
-			builder.append("[SEVBERE] ");
+			builder.append("[SEVERE] ");
 		}
 		
 		builder.append(logRecord.getMessage());

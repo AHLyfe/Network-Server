@@ -11,8 +11,6 @@ import javax.swing.JTextField;
 import javax.swing.border.EtchedBorder;
 import javax.swing.border.TitledBorder;
 
-import com.esotericsoftware.minlog.Log;
-
 import main.Main;
 
 public class Window extends JPanel{

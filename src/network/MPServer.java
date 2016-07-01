@@ -1,12 +1,13 @@
 package network;
 
 import java.io.IOException;
-import java.util.logging.Logger;
 
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryonet.Server;
+import com.esotericsoftware.minlog.Log;
 
-import network.Packet.*;
+import network.packet.LoginRequest;
+import network.packet.LoginResponse;
 
 public class MPServer {
 	private Server server;
@@ -14,16 +15,15 @@ public class MPServer {
 	public MPServer() throws IOException{
 		server = new Server();
 		registerPackets();
-		server.addListener(new NetworkListener());
+		server.addListener(new ServerListener());
 		server.bind(Properties.port,Properties.port);
 		server.start();
 	}
 	
 	private void registerPackets(){
 		Kryo kryo = server.getKryo();
-		kryo.register(Packet0LoginRequest.class);
-		kryo.register(Packet1LoginAccepted.class);
-		kryo.register(Packet2Message.class);
+		kryo.register(LoginRequest.class);
+		kryo.register(LoginResponse.class);
 	}
 	
 	public void stopServer(){
