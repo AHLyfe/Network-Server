@@ -8,6 +8,7 @@ import javax.swing.UIManager;
 
 import com.esotericsoftware.minlog.Log;
 
+import game.GameController;
 import network.MPServer;
 import network.Properties;
 import network.Window;
@@ -16,6 +17,7 @@ public class Main {
 	public static MPServer mpServer;
 	public static Logger logger;
 	public static Properties properties;
+	public static GameController gameController;
 	
 	public static void main(String[] args){
 		Log.set(Log.LEVEL_DEBUG);
@@ -44,6 +46,8 @@ public class Main {
 			Log.set(Log.LEVEL_DEBUG);
 		} catch (IOException e) {
 			e.printStackTrace();
-		}		
+		}
+		
+		gameController = new GameController();
 	}
 }

@@ -25,6 +25,7 @@ public class OutputHandler extends Handler{
 		StringBuilder builder = new StringBuilder();
 		Level level = logRecord.getLevel();
 		
+		
 		if(level == Level.FINEST){
 			builder.append("[FINEST] ");
 		}

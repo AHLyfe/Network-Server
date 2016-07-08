@@ -2,6 +2,8 @@ package network;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.util.logging.Logger;
 
 import javax.swing.JPanel;
@@ -44,6 +46,7 @@ public class Window extends JPanel{
 		text.setEditable(false);
 		
 		JTextField input = new JTextField();
+		input.addKeyListener(new ConsoleListener(input));
 		
 		panel.add(pane, "Center");
 		panel.add(input, "South");

@@ -4,6 +4,7 @@ import com.esotericsoftware.kryonet.Connection;
 import com.esotericsoftware.kryonet.Listener;
 import com.esotericsoftware.minlog.Log;
 
+import game.GameController;
 import main.Main;
 import network.packet.LoginRequest;
 import network.packet.LoginResponse;
@@ -13,6 +14,7 @@ public class ServerListener extends Listener{
 	@Override
 	public void connected(Connection con) {
 		Main.logger.info(con.getRemoteAddressUDP() + " has connected");
+		GameController.map.addPlayer("hihi");
 	}
 	
 	@Override

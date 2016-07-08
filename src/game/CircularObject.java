@@ -12,13 +12,6 @@ public class CircularObject extends GameObject {
 	}
 	
 	public void handleCollisionCircleObject(CircularObject cO){
-		//Special case for m1 = m2
-		if(mass == cO.mass){
-			Vector2D tempVelocity = velocity;
-			velocity = cO.velocity;
-			cO.velocity = tempVelocity;
-			return;
-		}
 		
 		//Ngl copied all of this code
 	    double xDist, yDist;
@@ -45,6 +38,36 @@ public class CircularObject extends GameObject {
             cO.velocity.x -= collisionWeightB * xCollision;
             cO.velocity.y -= collisionWeightB * yCollision;
 	    }
+	}
+	
+	public boolean collides(){
+		if (!(position.x + radius > Map.mapWidth && position.x - radius > 0 && position.y + radius < Map.mapHeight && position.y - radius > 0)){
+			return true;
+		}
+		
+		for(GameObject obj : Map.gameObjects){
+			if (obj instanceof CircularObject){
+				CircularObject cObj = (CircularObject) obj; 
+				if (this.intersects(cObj)){
+					return true;
+				}
+			}
+			else if(obj instanceof RectangularObject){
+				
+			}
+		}
+		return false;
+	}
+	
+	public boolean intersects(CircularObject cO){
+		if(position.dist(cO.position) <= radius + cO.radius){
+			return true;
+		}
+		return false;
+	}
+	
+	public double getRadius(){
+		return radius;
 	}
 
 }
